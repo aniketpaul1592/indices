@@ -8,7 +8,9 @@ function printIndices(val){
 	return new Promise(resolve => {
         setTimeout(() => {
             document.getElementById('root').innerHTML = val;
-
+            var tempStr = document.getElementById('conse').innerHTML||'';
+            tempStr += val;
+            document.getElementById('conse').innerHTML = tempStr;
             console.log(val);
             resolve();
         }, 3000);
